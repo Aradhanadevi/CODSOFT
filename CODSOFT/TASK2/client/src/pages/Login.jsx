@@ -36,7 +36,7 @@ const Login = () => {
   }
   return (
     <div className='h-[90vh] flex items-center justify-center'>
-    <div className='p-2 w-2/6 rounded bg-gray-800'>
+    <div className='p-2 w-2/6 h-2/6 rounded justify-center items-center' style={{background:"#104c56"}}>
         <div className='text-xl font-semibold'>Login</div>
         <input
             type="username"
@@ -45,6 +45,7 @@ const Login = () => {
             name='username' 
             value={Data.username}
             onChange={change}
+            style={{background:"#bcc1b4", color:"black"}}
         />
         <input
             type="password"
@@ -54,9 +55,12 @@ const Login = () => {
             required
             value={Data.password}
             onChange={change}
+            style={{background:"#bcc1b4", color:"black"}}
         />
        <div className='w-full flex items-center justify-between'>
-       <button className='bg-yellow-500 text-xl font-semibold text-black px-3 py-2 rounded' onClick={submit}>
+       <button className='bg-yellow-500 text-xl font-semibold text-black px-3 py-2 rounded'
+        style={{background:"#c87c21", color:"#3d263f"}}
+       onClick={submit}>
             Login
         </button>
         <Link to="/signup" className='text-gray-400 hover:text-gray-200 transition-all duration-300'>New user? Sign up</Link>

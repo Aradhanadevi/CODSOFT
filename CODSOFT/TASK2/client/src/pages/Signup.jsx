@@ -31,12 +31,13 @@ const Signup = () => {
   }
   return (
     <div className='h-[90vh] flex items-center justify-center'>
-        <div className='p-2 w-2/6 rounded bg-gray-800'>
+        <div className='p-2 w-2/6 rounded' style={{background:"#104c56"}}> 
             <div className='text-xl font-semibold'>SignUp</div>
             <input
                 type="username"
                 placeholder='username'
-                className='bg-gray-700 px-3 py-2 my-3 w-full rounded'   
+                className='px-3 py-2 my-3 w-full rounded'   
+                style={{background:"#bcc1b4", color:"black"}}
                 name='username' 
                 value={Data.username}
                 onChange={change}
@@ -48,6 +49,7 @@ const Signup = () => {
                 name='email' 
                 required
                 value={Data.email}
+                style={{background:"#bcc1b4", color:"black"}}
                 onChange={change}
             />
             <input
@@ -57,10 +59,13 @@ const Signup = () => {
                 name='password' 
                 required
                 value={Data.password}
+                style={{background:"#bcc1b4", color:"black"}}
                 onChange={change}
             />
             <div className='w-full flex items-center justify-between'>
-            <button className='bg-yellow-500 text-xl font-semibold text-black px-3 py-2 rounded' onClick={submit}>
+            <button className='bg-yellow-500 text-xl font-semibold text-black px-3 py-2 rounded' 
+            style={{background:"#c87c21", color:"#3d263f"}}
+            onClick={submit}>
                 Signup
             </button>
             <Link to="/login" className='text-gray-400 hover:text-gray-200 transition-all duration-300'>Already signup? Login</Link>
